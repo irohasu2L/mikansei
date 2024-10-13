@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シューティングゲーム</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+            display: none;
+        }
+        #score {
+            display: none;
+        }
+        #gameOver {
+            display: none;
+            font-size: 24px;
+            color: red;
+        }
+        #difficultySelect {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>シューティングゲーム</h1>
+    <div id="difficultySelect">
+        <label for="difficulty">難易度を選択:</label>
+        <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="normal">Normal</option>
+            <option value="hard">Hard</option>
+            <option value="nightmare">Nightmare</option>
+            <option value="inferno">Inferno</option>
+        </select>
+        <button id="startButton">ゲームスタート</button>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <div id="score">Score: 0</div>
+    <div id="gameOver">GAME OVER</div>
+    <button id="endButton" style="display: none;">終了</button>
+    <button id="pauseButton" style="display: none;">中断</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
